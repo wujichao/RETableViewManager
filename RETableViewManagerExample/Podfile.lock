@@ -1,20 +1,31 @@
 PODS:
   - REFormattedNumberField (1.1.5)
-  - RETableViewManager (1.5.14):
+  - RETableViewManager (1.7):
     - REFormattedNumberField (~> 1.1.5)
     - REValidation (~> 0.1.4)
   - REValidation (0.1.4)
+  - Reveal-SDK (11)
 
 DEPENDENCIES:
   - RETableViewManager (from `../`)
+  - Reveal-SDK (= 11)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - REFormattedNumberField
+    - REValidation
+    - Reveal-SDK
 
 EXTERNAL SOURCES:
   RETableViewManager:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  REFormattedNumberField: 86318c549b60130a6d7a05abebb142f08f671319
-  RETableViewManager: b6c8e1d0cb394fb923e9192b174ad30e815c215e
-  REValidation: a0033a582415848854e875dfcbe69c107de19f81
+  REFormattedNumberField: be3d55dd709f65541fb26b7e1709da07903147f8
+  RETableViewManager: a0575f9307d93ed8b560fc8d3198bcaa3cf175dd
+  REValidation: 38c4de1be58455f8b00aab208ac80db316a66b7f
+  Reveal-SDK: 7fa13d04bb55db61ff2342a990cf731d5159361d
 
-COCOAPODS: 0.35.0
+PODFILE CHECKSUM: 8774ff3664abba7bf57b9e28f10506e32221e56e
+
+COCOAPODS: 1.5.3

@@ -1,2 +1,6 @@
-platform :ios, '7.0'
-pod 'RETableViewManager', :path => '../'
+platform :ios, '9.0'
+
+target 'RETableViewManagerExample' do
+  pod 'RETableViewManager', :path => '../', :inhibit_warnings => false
+  pod 'Reveal-SDK', '11', :configurations => ['Debug']
+end

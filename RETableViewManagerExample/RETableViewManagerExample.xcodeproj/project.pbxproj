@@ -61,11 +61,10 @@
 		30FE4163176A32C300F317B8 /* Single@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FE415A176A32C300F317B8 /* Single@2x.png */; };
 		50359B2119D2BF8C00559B3E /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50359B1F19D2BF8C00559B3E /* Default-667h@2x.png */; };
 		50359B2219D2BF8C00559B3E /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50359B2019D2BF8C00559B3E /* Default-736h@3x.png */; };
-		53378ADE88FA40FD87184931 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA85FF11E7E458B98D5825C /* libPods.a */; };
+		F2814D00593F9CCD9E6BAEB6 /* libPods-RETableViewManagerExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D875647280DD96E71EA02DDE /* libPods-RETableViewManagerExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2CB8A3CB021C642AB3E6C98D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		302D2149170B25B10085654F /* ControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlsViewController.h; sourceTree = "<group>"; };
 		302D214A170B25B10085654F /* ControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlsViewController.m; sourceTree = "<group>"; };
 		302D214B170B25B10085654F /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
@@ -138,10 +137,11 @@
 		30FE4158176A32C300F317B8 /* Middle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Middle@2x.png"; path = "Resources/Middle@2x.png"; sourceTree = "<group>"; };
 		30FE4159176A32C300F317B8 /* Single_Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Single_Selected@2x.png"; path = "Resources/Single_Selected@2x.png"; sourceTree = "<group>"; };
 		30FE415A176A32C300F317B8 /* Single@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Single@2x.png"; path = "Resources/Single@2x.png"; sourceTree = "<group>"; };
+		4FA8AA86AE35567F54B506A7 /* Pods-RETableViewManagerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RETableViewManagerExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RETableViewManagerExample/Pods-RETableViewManagerExample.debug.xcconfig"; sourceTree = "<group>"; };
 		50359B1F19D2BF8C00559B3E /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		50359B2019D2BF8C00559B3E /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
-		5EA85FF11E7E458B98D5825C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C93C8651600E6C213AA4EA2B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		68BCD43F2130640F708943B9 /* Pods-RETableViewManagerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RETableViewManagerExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RETableViewManagerExample/Pods-RETableViewManagerExample.release.xcconfig"; sourceTree = "<group>"; };
+		D875647280DD96E71EA02DDE /* libPods-RETableViewManagerExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RETableViewManagerExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +152,7 @@
 				30EF93B316E039B800B84981 /* UIKit.framework in Frameworks */,
 				30EF93B516E039B800B84981 /* Foundation.framework in Frameworks */,
 				30EF93B716E039B800B84981 /* CoreGraphics.framework in Frameworks */,
-				53378ADE88FA40FD87184931 /* libPods.a in Frameworks */,
+				F2814D00593F9CCD9E6BAEB6 /* libPods-RETableViewManagerExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +248,7 @@
 				30EF93B816E039B800B84981 /* RETableViewManagerExample */,
 				30EF93B116E039B800B84981 /* Frameworks */,
 				30EF93B016E039B800B84981 /* Products */,
-				8EE3051347C122544625393F /* Pods */,
+				C662C02029A63A2F2086BBF3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,7 +266,7 @@
 				30EF93B216E039B800B84981 /* UIKit.framework */,
 				30EF93B416E039B800B84981 /* Foundation.framework */,
 				30EF93B616E039B800B84981 /* CoreGraphics.framework */,
-				5EA85FF11E7E458B98D5825C /* libPods.a */,
+				D875647280DD96E71EA02DDE /* libPods-RETableViewManagerExample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -313,11 +313,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8EE3051347C122544625393F /* Pods */ = {
+		C662C02029A63A2F2086BBF3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C93C8651600E6C213AA4EA2B /* Pods.debug.xcconfig */,
-				2CB8A3CB021C642AB3E6C98D /* Pods.release.xcconfig */,
+				4FA8AA86AE35567F54B506A7 /* Pods-RETableViewManagerExample.debug.xcconfig */,
+				68BCD43F2130640F708943B9 /* Pods-RETableViewManagerExample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -329,11 +329,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30EF93CC16E039B800B84981 /* Build configuration list for PBXNativeTarget "RETableViewManagerExample" */;
 			buildPhases = (
-				C91F9E51E3614E49887C24A5 /* Check Pods Manifest.lock */,
+				E64A78D1570C20B98E22D24A /* [CP] Check Pods Manifest.lock */,
 				30EF93AB16E039B800B84981 /* Sources */,
 				30EF93AC16E039B800B84981 /* Frameworks */,
 				30EF93AD16E039B800B84981 /* Resources */,
-				F83E7E6735F94118B5022F1E /* Copy Pods Resources */,
+				0A0765E488B636D9230A5C70 /* [CP] Embed Pods Frameworks */,
+				7BBCE4E79008B3EF827967CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -419,34 +420,70 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C91F9E51E3614E49887C24A5 /* Check Pods Manifest.lock */ = {
+		0A0765E488B636D9230A5C70 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RETableViewManagerExample/Pods-RETableViewManagerExample-frameworks.sh",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-11/iOS/RevealServer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RETableViewManagerExample/Pods-RETableViewManagerExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F83E7E6735F94118B5022F1E /* Copy Pods Resources */ = {
+		7BBCE4E79008B3EF827967CA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Copy Pods Resources";
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RETableViewManagerExample/Pods-RETableViewManagerExample-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RETableViewManager/RETableViewManager.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RETableViewManager.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RETableViewManagerExample/Pods-RETableViewManagerExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E64A78D1570C20B98E22D24A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RETableViewManagerExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -549,7 +586,7 @@
 		};
 		30EF93CD16E039B800B84981 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C93C8651600E6C213AA4EA2B /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 4FA8AA86AE35567F54B506A7 /* Pods-RETableViewManagerExample.debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RETableViewManagerExample/RETableViewManagerExample-Prefix.pch";
@@ -565,7 +602,7 @@
 		};
 		30EF93CE16E039B800B84981 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CB8A3CB021C642AB3E6C98D /* Pods.release.xcconfig */;
+			baseConfigurationReference = 68BCD43F2130640F708943B9 /* Pods-RETableViewManagerExample.release.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RETableViewManagerExample/RETableViewManagerExample-Prefix.pch";
