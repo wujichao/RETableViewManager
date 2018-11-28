@@ -12,6 +12,6 @@
 @interface ListImageCell : RETableViewCell
 
 @property (strong, readonly, nonatomic) UIImageView *pictureView;
-@property (strong, readwrite, nonatomic) ListImageItem *imageItem;
+@property (strong, readwrite, nonatomic) ListImageItem *item;
 
 @end
