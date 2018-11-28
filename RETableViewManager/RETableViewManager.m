@@ -93,6 +93,7 @@
 {
     self[@"__NSCFConstantString"] = @"RETableViewCell";
     self[@"__NSCFString"] = @"RETableViewCell";
+    self[@"NSTaggedPointerString"] = @"RETableViewCell";
     self[@"NSString"] = @"RETableViewCell";
     self[@"RETableViewItem"] = @"RETableViewCell";
     self[@"RERadioItem"] = @"RETableViewOptionCell";
@@ -187,6 +188,7 @@
     NSString *cellIdentifier = [NSString stringWithFormat:@"RETableViewManager_%@_%li", [item class], (long) cellStyle];
     
     Class cellClass = [self classForCellAtIndexPath:indexPath];
+    NSAssert(cellClass != nil, @"not found cell for item(%@)", NSStringFromClass(item.class));
     
     if (self.registeredXIBs[NSStringFromClass(cellClass)]) {
         cellIdentifier = self.registeredXIBs[NSStringFromClass(cellClass)];
