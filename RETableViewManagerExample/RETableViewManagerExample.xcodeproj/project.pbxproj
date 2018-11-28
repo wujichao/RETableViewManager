@@ -355,7 +355,7 @@
 				ORGANIZATIONNAME = "Roman Efimov";
 				TargetAttributes = {
 					30EF93AE16E039B800B84981 = {
-						DevelopmentTeam = 28LMQ2XKWE;
+						DevelopmentTeam = 74Z7WT84EE;
 					};
 				};
 			};
@@ -588,6 +588,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4FA8AA86AE35567F54B506A7 /* Pods-RETableViewManagerExample.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 74Z7WT84EE;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RETableViewManagerExample/RETableViewManagerExample-Prefix.pch";
 				GCC_WARN_UNUSED_FUNCTION = YES;
@@ -604,6 +605,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 68BCD43F2130640F708943B9 /* Pods-RETableViewManagerExample.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 74Z7WT84EE;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RETableViewManagerExample/RETableViewManagerExample-Prefix.pch";
 				GCC_WARN_UNUSED_FUNCTION = YES;
