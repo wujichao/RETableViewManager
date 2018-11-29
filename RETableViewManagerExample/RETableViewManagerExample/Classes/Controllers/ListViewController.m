@@ -26,11 +26,7 @@
     // Create manager
     //
     self.manager = [[RETableViewManager alloc] initWithTableView:self.tableView];
-    
-    // Map item to a cell
-    //
-    //self.manager[@"ListImageItem"] = @"ListImageCell"; // which is the same as [self.manager registerClass:@"ListImageItem" forCellWithReuseIdentifier:@"ListImageCell"];
-    
+
     // Set some UITableView properties
     //
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;

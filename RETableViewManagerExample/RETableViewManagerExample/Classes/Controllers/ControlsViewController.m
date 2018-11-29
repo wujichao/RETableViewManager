@@ -80,13 +80,6 @@
     RETableViewSection *section = [RETableViewSection sectionWithHeaderTitle:@"Basic controls"];
     [self.manager addSection:section];
     
-    // Custom item / cell
-//    self.manager[@"MultilineTextItem"] = @"MultilineTextCell";
-    
-    // Add items to this section
-    //
-//    [section addItem:@"Simple NSString"];
-    
     self.fullLengthFieldItem = [RETextItem itemWithTitle:nil value:nil placeholder:@"Full length text field"];    
     self.textItem = [RETextItem itemWithTitle:@"Text item" value:nil placeholder:@"Text"];
     self.numberItem = [RENumberItem itemWithTitle:@"Phone" value:@"" placeholder:@"(123) 456-7890" format:@"(XXX) XXX-XXXX"];

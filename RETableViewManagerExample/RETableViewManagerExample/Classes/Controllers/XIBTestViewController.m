@@ -25,10 +25,7 @@
     // Create manager
     //
     self.manager = [[RETableViewManager alloc] initWithTableView:self.tableView delegate:self];
-    
-    // Map item to a cell, this will also register the XIBTestCell.xib for the XIBTestItem identifier
-    //
-//    self.manager[@"XIBTestItem"] = @"XIBTestCell";
+
     
     // Add a section
     //
@@ -50,8 +47,8 @@
     // You can manually set it if you want to:
     // item.cellIdentifier = @"CustomIdentifier";
     //
-    // You'll need to register a cell class for it as well:
-    // [self.tableView registerNib:[UINib nibWithNibName:@"XIBTestCell" bundle:nil] forCellReuseIdentifier:@"CustomIdentifier"];
+    // You'll don't need to register a cell class
+    // [self.tableView registerNib:forCellReuseIdentifier:] will be auto invoked;
 }
 
 @end
