@@ -24,6 +24,7 @@
 //
 
 #import "REFloatItem.h"
+#import "RETableViewFloatCell.h"
 
 @implementation REFloatItem
 
@@ -52,6 +53,7 @@
     self.value = value;
     self.sliderValueChangeHandler = sliderValueChangeHandler;
     self.sliderWidth = 140.0;
+    self.cellClass = RETableViewFloatCell.class;
     
     return self;
 }

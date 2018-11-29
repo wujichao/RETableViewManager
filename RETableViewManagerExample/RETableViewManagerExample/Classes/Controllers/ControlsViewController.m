@@ -81,11 +81,11 @@
     [self.manager addSection:section];
     
     // Custom item / cell
-    self.manager[@"MultilineTextItem"] = @"MultilineTextCell";
+//    self.manager[@"MultilineTextItem"] = @"MultilineTextCell";
     
     // Add items to this section
     //
-    [section addItem:@"Simple NSString"];
+//    [section addItem:@"Simple NSString"];
     
     self.fullLengthFieldItem = [RETextItem itemWithTitle:nil value:nil placeholder:@"Full length text field"];    
     self.textItem = [RETextItem itemWithTitle:@"Text item" value:nil placeholder:@"Text"];

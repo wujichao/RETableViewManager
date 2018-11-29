@@ -27,6 +27,7 @@
 
 @class RETableViewManager;
 @class RETableViewCellStyle;
+@class RETableViewItem;
 
 extern CGFloat const RETableViewSectionHeaderHeightAutomatic;
 extern CGFloat const RETableViewSectionFooterHeightAutomatic;
@@ -187,7 +188,7 @@ extern CGFloat const RETableViewSectionFooterHeightAutomatic;
  @param item The item to add to the end of the section. This value must not be `nil`.
  @return The item.
  */
-- (void)addItem:(id)item;
+- (void)addItem:(RETableViewItem *)item;
 
 /**
  Adds the items contained in another given array to the end of the section.
@@ -202,7 +203,7 @@ extern CGFloat const RETableViewSectionFooterHeightAutomatic;
  @param item The item to add to the section. This value must not be nil.
  @param index The index in the section at which to insert item. This value must not be greater than the count of items in the section.
  */
-- (void)insertItem:(id)item atIndex:(NSUInteger)index;
+- (void)insertItem:(RETableViewItem *)item atIndex:(NSUInteger)index;
 
 /**
  Inserts the items in the provided items array into the section at the specified indexes.
@@ -221,7 +222,7 @@ extern CGFloat const RETableViewSectionFooterHeightAutomatic;
  
  @param item The item to remove from the section.
  */
-- (void)removeItem:(id)item;
+- (void)removeItem:(RETableViewItem *)item;
 
 /**
  Empties the section of all its items.
@@ -235,14 +236,14 @@ extern CGFloat const RETableViewSectionFooterHeightAutomatic;
  @param item The item to remove from the section within range.
  @param range The range in the section from which to remove section.
  */
-- (void)removeItemIdenticalTo:(id)item inRange:(NSRange)range;
+- (void)removeItemIdenticalTo:(RETableViewItem *)item inRange:(NSRange)range;
 
 /**
  Removes all occurrences of a given item in the section.
  
  @param item The section to remove from the section.
  */
-- (void)removeItemIdenticalTo:(id)item;
+- (void)removeItemIdenticalTo:(RETableViewItem *)item;
 
 /**
  Removes from the section the items in another given array.
@@ -264,7 +265,7 @@ extern CGFloat const RETableViewSectionFooterHeightAutomatic;
  @param item The item to remove from the section.
  @param range The range from which to remove item.
  */
-- (void)removeItem:(id)item inRange:(NSRange)range;
+- (void)removeItem:(RETableViewItem *)item inRange:(NSRange)range;
 
 /**
  Removes the item with the highest-valued index in the section.
@@ -296,7 +297,7 @@ extern CGFloat const RETableViewSectionFooterHeightAutomatic;
  @param index The index of the item to be replaced. This value must not exceed the bounds of the section.
  @param item The item with which to replace the item at index index in the section. This value must not be `nil`.
  */
-- (void)replaceItemAtIndex:(NSUInteger)index withItem:(id)item;
+- (void)replaceItemAtIndex:(NSUInteger)index withItem:(RETableViewItem *)item;
 
 /**
  Replaces the items in the section with all of the items from a given array.

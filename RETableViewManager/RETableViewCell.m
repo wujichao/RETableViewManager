@@ -25,6 +25,7 @@
 
 #import "RETableViewCell.h"
 #import "RETableViewManager.h"
+#import <UITableView+FDTemplateLayoutCell.h>
 
 @interface RETableViewCell ()
 
@@ -43,10 +44,17 @@
 
 + (CGFloat)heightWithItem:(RETableViewItem *)item tableViewManager:(RETableViewManager *)tableViewManager
 {
-    if ([item isKindOfClass:[RETableViewItem class]] && item.cellHeight > 0)
+//    if (item.cellHeight == UITableViewAutomaticDimension){
+//        return [tableViewManager.tableView fd_heightForCellWithIdentifier:item.cellIdentifier configuration:^(RETableViewCell *cell) {
+//            cell.item = item;
+//            [cell cellWillAppear];
+//        }];
+//    }
+
+    if (item.cellHeight > 0)
         return item.cellHeight;
     
-    if ([item isKindOfClass:[RETableViewItem class]] && item.cellHeight == 0)
+    if (item.cellHeight == 0)
         return item.section.style.cellHeight;
     
     return tableViewManager.style.cellHeight;
@@ -228,11 +236,8 @@
     NSUInteger indexInSection =  [section isEqual:self.section] ? [section.items indexOfObject:self.item] : section.items.count;
     for (NSInteger i = indexInSection - 1; i >= 0; i--) {
         RETableViewItem *item = section.items[i];
-        if ([item isKindOfClass:[RETableViewItem class]]) {
-            Class class = [self.tableViewManager classForCellAtIndexPath:item.indexPath];
-            if ([class canFocusWithItem:item])
-                return [NSIndexPath indexPathForRow:i inSection:sectionIndex];
-        }
+        if ([item.cellClass canFocusWithItem:item])
+            return [NSIndexPath indexPathForRow:i inSection:sectionIndex];
     }
     return nil;
 }
@@ -253,11 +258,8 @@
     NSUInteger indexInSection =  [section isEqual:self.section] ? [section.items indexOfObject:self.item] : -1;
     for (NSInteger i = indexInSection + 1; i < section.items.count; i++) {
         RETableViewItem *item = section.items[i];
-        if ([item isKindOfClass:[RETableViewItem class]]) {
-            Class class = [self.tableViewManager classForCellAtIndexPath:item.indexPath];
-            if ([class canFocusWithItem:item])
-                return [NSIndexPath indexPathForRow:i inSection:sectionIndex];
-        }
+        if ([item.cellClass canFocusWithItem:item])
+            return [NSIndexPath indexPathForRow:i inSection:sectionIndex];
     }
     return nil;
 }

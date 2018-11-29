@@ -28,7 +28,7 @@
     
     // Map item to a cell, this will also register the XIBTestCell.xib for the XIBTestItem identifier
     //
-    self.manager[@"XIBTestItem"] = @"XIBTestCell";
+//    self.manager[@"XIBTestItem"] = @"XIBTestCell";
     
     // Add a section
     //

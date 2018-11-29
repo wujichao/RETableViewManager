@@ -24,6 +24,7 @@
 //
 
 #import "RELongTextItem.h"
+#import "RETableViewLongTextCell.h"
 
 @implementation RELongTextItem
 
@@ -40,6 +41,7 @@
     
     self.placeholderColor = [UIColor lightGrayColor];
     self.editable = YES;
+    self.cellClass = RETableViewLongTextCell.class;
     
     return self;
 }

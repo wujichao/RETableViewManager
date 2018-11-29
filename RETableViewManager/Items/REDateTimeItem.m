@@ -24,6 +24,7 @@
 //
 
 #import "REDateTimeItem.h"
+#import "RETableViewDateTimeCell.h"
 
 @implementation REDateTimeItem
 
@@ -44,7 +45,8 @@
     self.datePickerMode = datePickerMode;
     self.style = UITableViewCellStyleValue1;
     self.placeholder = placeholder;
-    
+    self.cellClass = RETableViewDateTimeCell.class;
+
     return self;
 }
 

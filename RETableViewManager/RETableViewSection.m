@@ -152,41 +152,49 @@ CGFloat const RETableViewSectionFooterHeightAutomatic = DBL_MAX;
     return self.mutableItems;
 }
 
-- (void)addItem:(id)item
+- (void)checkItem:(RETableViewItem *)item
 {
-    if ([item isKindOfClass:[RETableViewItem class]])
-        ((RETableViewItem *)item).section = self;
-    
+    NSAssert([item isKindOfClass:[RETableViewItem class]], @"item(%@) must be kind of RETableViewItem.class", NSStringFromClass(item.class));
+    NSAssert(item.cellClass != nil, @"class of cell must be set for item(%@)", NSStringFromClass(item.class));
+}
+
+- (void)addItem:(RETableViewItem *)item
+{
+    [self checkItem:item];
+    item.section = self;
+
     [self.mutableItems addObject:item];
 }
 
 - (void)addItemsFromArray:(NSArray *)array
 {
-    for (RETableViewItem *item in array)
-        if ([item isKindOfClass:[RETableViewItem class]])
-            ((RETableViewItem *)item).section = self;
-    
+    for (RETableViewItem *item in array) {
+        [self checkItem:item];
+        item.section = self;
+    }
+
     [self.mutableItems addObjectsFromArray:array];
 }
 
-- (void)insertItem:(id)item atIndex:(NSUInteger)index
+- (void)insertItem:(RETableViewItem *)item atIndex:(NSUInteger)index
 {
-    if ([item isKindOfClass:[RETableViewItem class]])
-        ((RETableViewItem *)item).section = self;
+    [self checkItem:item];
+    item.section = self;
     
     [self.mutableItems insertObject:item atIndex:index];
 }
 
 - (void)insertItems:(NSArray *)items atIndexes:(NSIndexSet *)indexes
 {
-    for (RETableViewItem *item in items)
-        if ([item isKindOfClass:[RETableViewItem class]])
-            ((RETableViewItem *)item).section = self;
+    for (RETableViewItem *item in items) {
+        [self checkItem:item];
+        item.section = self;
+    }
     
     [self.mutableItems insertObjects:items atIndexes:indexes];
 }
 
-- (void)removeItem:(id)item inRange:(NSRange)range
+- (void)removeItem:(RETableViewItem *)item inRange:(NSRange)range
 {
     [self.mutableItems removeObject:item inRange:range];
 }
@@ -201,7 +209,7 @@ CGFloat const RETableViewSectionFooterHeightAutomatic = DBL_MAX;
     [self.mutableItems removeObjectAtIndex:index];
 }
 
-- (void)removeItem:(id)item
+- (void)removeItem:(RETableViewItem *)item
 {
     [self.mutableItems removeObject:item];
 }
@@ -211,12 +219,12 @@ CGFloat const RETableViewSectionFooterHeightAutomatic = DBL_MAX;
     [self.mutableItems removeAllObjects];
 }
 
-- (void)removeItemIdenticalTo:(id)item inRange:(NSRange)range
+- (void)removeItemIdenticalTo:(RETableViewItem *)item inRange:(NSRange)range
 {
     [self.mutableItems removeObjectIdenticalTo:item inRange:range];
 }
 
-- (void)removeItemIdenticalTo:(id)item
+- (void)removeItemIdenticalTo:(RETableViewItem *)item
 {
     [self.mutableItems removeObjectIdenticalTo:item];
 }
@@ -236,10 +244,10 @@ CGFloat const RETableViewSectionFooterHeightAutomatic = DBL_MAX;
     [self.mutableItems removeObjectsAtIndexes:indexes];
 }
 
-- (void)replaceItemAtIndex:(NSUInteger)index withItem:(id)item
+- (void)replaceItemAtIndex:(NSUInteger)index withItem:(RETableViewItem *)item
 {
-    if ([item isKindOfClass:[RETableViewItem class]])
-        ((RETableViewItem *)item).section = self;
+    [self checkItem:item];
+    item.section = self;
     
     [self.mutableItems replaceObjectAtIndex:index withObject:item];
 }
@@ -252,27 +260,30 @@ CGFloat const RETableViewSectionFooterHeightAutomatic = DBL_MAX;
 
 - (void)replaceItemsInRange:(NSRange)range withItemsFromArray:(NSArray *)otherArray range:(NSRange)otherRange
 {
-    for (RETableViewItem *item in otherArray)
-        if ([item isKindOfClass:[RETableViewItem class]])
-            ((RETableViewItem *)item).section = self;
+    for (RETableViewItem *item in otherArray) {
+        [self checkItem:item];
+        item.section = self;
+    }
     
     [self.mutableItems replaceObjectsInRange:range withObjectsFromArray:otherArray range:otherRange];
 }
 
 - (void)replaceItemsInRange:(NSRange)range withItemsFromArray:(NSArray *)otherArray
 {
-    for (RETableViewItem *item in otherArray)
-        if ([item isKindOfClass:[RETableViewItem class]])
-            ((RETableViewItem *)item).section = self;
-    
+    for (RETableViewItem *item in otherArray) {
+        [self checkItem:item];
+        item.section = self;
+    }
+
     [self.mutableItems replaceObjectsInRange:range withObjectsFromArray:otherArray];
 }
 
 - (void)replaceItemsAtIndexes:(NSIndexSet *)indexes withItems:(NSArray *)items
 {
-    for (RETableViewItem *item in items)
-        if ([item isKindOfClass:[RETableViewItem class]])
-            ((RETableViewItem *)item).section = self;
+    for (RETableViewItem *item in items) {
+        [self checkItem:item];
+        item.section = self;
+    }
     
     [self.mutableItems replaceObjectsAtIndexes:indexes withObjects:items];
 }

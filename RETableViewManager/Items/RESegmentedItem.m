@@ -25,6 +25,7 @@
 //
 
 #import "RESegmentedItem.h"
+#import "RETableViewSegmentedCell.h"
 
 @implementation RESegmentedItem
 
@@ -53,7 +54,8 @@
     self.segmentedControlTitles = titles;
     self.value = value;
     self.switchValueChangeHandler = switchValueChangeHandler;
-    
+    self.cellClass = RETableViewSegmentedCell.class;
+
     return self;
 }
 
@@ -82,7 +84,8 @@
     self.segmentedControlImages = images;
     self.value = value;
     self.switchValueChangeHandler = switchValueChangeHandler;
-    
+    self.cellClass = RETableViewSegmentedCell.class;
+
     return self;
 }
 

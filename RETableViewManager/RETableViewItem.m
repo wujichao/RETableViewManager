@@ -29,6 +29,38 @@
 
 @implementation RETableViewItem
 
++ (instancetype)itemWithCellClass:(Class)cellClass
+                 selectionHandler:(void(^)(RETableViewItem *item))selectionHandler
+{
+    return [[self alloc] initWithCellClass:cellClass
+                          selectionHandler:selectionHandler];
+}
+
+- (id)initWithCellClass:(Class)cellClass
+       selectionHandler:(void(^)(RETableViewItem *item))selectionHandler
+{
+    self = [self init];
+    if (!self)
+        return nil;
+
+    self.cellClass = cellClass;
+    self.selectionHandler = selectionHandler;
+
+    NSAssert([cellClass isKindOfClass:RETableViewCell.class],
+            @"cell(%@) must be subclass of RETableViewCell.", NSStringFromClass(cellClass));
+
+    return self;
+}
+
+- (NSString *)cellIdentifier
+{
+    if (_cellIdentifier) {
+        return _cellIdentifier;
+    }
+
+    return NSStringFromClass(self.cellClass);
+}
+
 + (instancetype)item
 {
     return [[self alloc] init];
@@ -75,7 +107,7 @@
     self.accessoryType = accessoryType;
     self.selectionHandler = selectionHandler;
     self.accessoryButtonTapHandler = accessoryButtonTapHandler;
-    
+
     return self;
 }
 
@@ -88,7 +120,8 @@
     self.enabled = YES;
     self.cellHeight = 0;
     self.selectionStyle = UITableViewCellSelectionStyleBlue;
-    
+    self.cellClass = RETableViewCell.class;
+
     return self;
 }
 

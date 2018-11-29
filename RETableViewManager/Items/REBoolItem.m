@@ -24,6 +24,7 @@
 //
 
 #import "REBoolItem.h"
+#import "RETableViewBoolCell.h"
 
 @implementation REBoolItem
 
@@ -51,7 +52,8 @@
     self.title = title;
     self.value = value;
     self.switchValueChangeHandler = switchValueChangeHandler;
-    
+    self.cellClass = RETableViewBoolCell.class;
+
     return self;
 }
 

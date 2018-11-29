@@ -7,8 +7,19 @@
 //
 
 #import "MultilineTextItem.h"
+#import "MultilineTextCell.h"
 
 @implementation MultilineTextItem
 
+- (id)initWithTitle:(NSString *)title
+{
+    self = [super initWithTitle:title];
+    if (!self)
+        return nil;
+
+    self.cellClass = MultilineTextCell.class;
+
+    return self;
+}
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "REInlineDatePickerItem.h"
+#import "RETableViewInlineDatePickerCell.h"
 
 @implementation REInlineDatePickerItem
 
@@ -22,7 +23,8 @@
         return nil;
     
     _dateTimeItem = dateTimeItem;
-    
+    self.cellClass = RETableViewInlineDatePickerCell.class;
+
     return self;
 }
 

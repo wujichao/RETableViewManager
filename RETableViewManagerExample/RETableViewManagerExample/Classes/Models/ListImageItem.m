@@ -7,6 +7,7 @@
 //
 
 #import "ListImageItem.h"
+#import "ListImageCell.h"
 
 @implementation ListImageItem
 
@@ -15,6 +16,15 @@
     ListImageItem *item = [[ListImageItem alloc] init];
     item.imageName = imageName;
     return item;
+}
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.cellClass = ListImageCell.class;
+    }
+    return self;
 }
 
 @end

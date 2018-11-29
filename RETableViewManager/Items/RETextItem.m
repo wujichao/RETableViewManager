@@ -24,6 +24,7 @@
 //
 
 #import "RETextItem.h"
+#import "RETableViewTextCell.h"
 
 @implementation RETextItem
 
@@ -51,7 +52,8 @@
     self.title = title;
     self.value = value;
     self.placeholder = placeholder;
-    
+    self.cellClass = RETableViewTextCell.class;
+
     return self;
 }
 

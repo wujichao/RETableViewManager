@@ -48,7 +48,8 @@
     };
     self.value = value;
     self.style = UITableViewCellStyleValue1;
-    
+    self.cellClass = RETableViewOptionCell.class;
+
     return self;
 }
 

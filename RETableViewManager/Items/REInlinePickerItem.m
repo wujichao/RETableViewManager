@@ -7,6 +7,7 @@
 //
 
 #import "REInlinePickerItem.h"
+#import "RETableViewInlinePickerCell.h"
 
 @implementation REInlinePickerItem
 
@@ -20,6 +21,7 @@
     self = [super init];
     if (self) {
         _pickerItem = pickerItem;
+        self.cellClass = RETableViewInlinePickerCell.class;
     }
     return self;
 }

@@ -25,6 +25,7 @@
 
 #import "RECreditCardItem.h"
 #import "NSBundle+RETableViewManager.h"
+#import "RETableViewCreditCardCell.h"
 
 @implementation RECreditCardItem
 
@@ -55,7 +56,8 @@
     self.expirationDate = expirationDate;
     self.cvv = cvv;
     self.cvvRequired = YES;
-    
+    self.cellClass = RETableViewCreditCardCell.class;
+
     return self;
 }
 

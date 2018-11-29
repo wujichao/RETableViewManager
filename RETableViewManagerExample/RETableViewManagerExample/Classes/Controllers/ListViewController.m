@@ -29,7 +29,7 @@
     
     // Map item to a cell
     //
-    self.manager[@"ListImageItem"] = @"ListImageCell"; // which is the same as [self.manager registerClass:@"ListImageItem" forCellWithReuseIdentifier:@"ListImageCell"];
+    //self.manager[@"ListImageItem"] = @"ListImageCell"; // which is the same as [self.manager registerClass:@"ListImageItem" forCellWithReuseIdentifier:@"ListImageCell"];
     
     // Set some UITableView properties
     //

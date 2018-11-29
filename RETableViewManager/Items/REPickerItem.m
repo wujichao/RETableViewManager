@@ -24,6 +24,7 @@
 //
 
 #import "REPickerItem.h"
+#import "RETableViewPickerCell.h"
 
 @implementation REPickerItem
 
@@ -44,7 +45,8 @@
     self.placeholder = placeholder;
     self.value = value;
     self.options = options;
-    
+    self.cellClass = RETableViewPickerCell.class;
+
     return self;
 }
 

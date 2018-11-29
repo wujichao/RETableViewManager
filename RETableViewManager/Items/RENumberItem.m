@@ -24,6 +24,7 @@
 //
 
 #import "RENumberItem.h"
+#import "RETableViewNumberCell.h"
 
 @implementation RENumberItem
 
@@ -42,6 +43,7 @@
     self.value = value;
     self.placeholder = placeholder;
     self.format = format;
+    self.cellClass = RETableViewNumberCell.class;
     
     return self;
 }

@@ -7,7 +7,17 @@
 //
 
 #import "XIBTestItem.h"
+#import "XIBTestCell.h"
 
 @implementation XIBTestItem
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.cellClass = XIBTestCell.class;
+    }
+    return self;
+}
 
 @end

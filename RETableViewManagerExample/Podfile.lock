@@ -3,8 +3,10 @@ PODS:
   - RETableViewManager (1.7):
     - REFormattedNumberField (~> 1.1.5)
     - REValidation (~> 0.1.4)
+    - "UITableView+FDTemplateLayoutCell (~> 1.6)"
   - REValidation (0.1.4)
   - Reveal-SDK (11)
+  - "UITableView+FDTemplateLayoutCell (1.6)"
 
 DEPENDENCIES:
   - RETableViewManager (from `../`)
@@ -15,6 +17,7 @@ SPEC REPOS:
     - REFormattedNumberField
     - REValidation
     - Reveal-SDK
+    - "UITableView+FDTemplateLayoutCell"
 
 EXTERNAL SOURCES:
   RETableViewManager:
@@ -22,9 +25,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   REFormattedNumberField: be3d55dd709f65541fb26b7e1709da07903147f8
-  RETableViewManager: a0575f9307d93ed8b560fc8d3198bcaa3cf175dd
+  RETableViewManager: 38f451de5d1927cdb59b03926e32db411bb104cc
   REValidation: 38c4de1be58455f8b00aab208ac80db316a66b7f
   Reveal-SDK: 7fa13d04bb55db61ff2342a990cf731d5159361d
+  "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
 
 PODFILE CHECKSUM: 8774ff3664abba7bf57b9e28f10506e32221e56e
 
