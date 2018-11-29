@@ -30,11 +30,6 @@
 /**
  The array of pairs of items / cell classes.
  */
-//@property (strong, readwrite, nonatomic) NSMutableDictionary *registeredXIBs;
-
-/**
- The array of pairs of items / cell classes.
- */
 @property (strong, readwrite, nonatomic) NSMutableDictionary *registeredClasses;
 
 @property (strong, readwrite, nonatomic) NSMutableArray *mutableSections;
@@ -87,43 +82,13 @@
 
     self.mutableSections = [[NSMutableArray alloc] init];
     self.registeredClasses = [[NSMutableDictionary alloc] init];
-//    self.registeredXIBs = [[NSMutableDictionary alloc] init];
     self.style = [[RETableViewCellStyle alloc] init];
     
     return self;
 }
 
-- (void)registerDefaultClasses
-{
-
-    //self[@"RETableViewItem"] = @"RETableViewCell";
-    //self[@"RERadioItem"] = @"RETableViewOptionCell";
-//    self[@"REBoolItem"] = @"RETableViewBoolCell";
-//    self[@"RETextItem"] = @"RETableViewTextCell";
-//    self[@"RELongTextItem"] = @"RETableViewLongTextCell";
-//    self[@"RENumberItem"] = @"RETableViewNumberCell";
-//    self[@"REFloatItem"] = @"RETableViewFloatCell";
-//    self[@"REDateTimeItem"] = @"RETableViewDateTimeCell";
-//    self[@"RECreditCardItem"] = @"RETableViewCreditCardCell";
-//    self[@"REMultipleChoiceItem"] = @"RETableViewOptionCell";
-//    self[@"REPickerItem"] = @"RETableViewPickerCell";
-//    self[@"RESegmentedItem"] = @"RETableViewSegmentedCell";
-//    self[@"REInlineDatePickerItem"] = @"RETableViewInlineDatePickerCell";
-//    self[@"REInlinePickerItem"] = @"RETableViewInlinePickerCell";
-}
-
-//- (void)registerClass:(NSString *)objectClass forCellWithReuseIdentifier:(NSString *)identifier
-//{
-//    [self registerClass:objectClass forCellWithReuseIdentifier:identifier bundle:nil];
-//}
-
-//- (void)registerClass:(NSString *)objectClass forCellWithReuseIdentifier:(NSString *)identifier bundle:(NSBundle *)bundle
 - (void)registerCellClassIfNeeded:(RETableViewItem *)item bundle:(NSBundle *)bundle
 {
-//    NSAssert(NSClassFromString(objectClass), ([NSString stringWithFormat:@"Item class '%@' does not exist.", objectClass]));
-//    NSAssert(NSClassFromString(identifier), ([NSString stringWithFormat:@"Cell class '%@' does not exist.", identifier]));
-//    self.registeredClasses[(id <NSCopying>)NSClassFromString(objectClass)] = NSClassFromString(identifier);
-
     if (self.registeredClasses[item.cellIdentifier]) {
         return;
     }
@@ -135,23 +100,11 @@
         bundle = [NSBundle mainBundle];
     
     if ([bundle pathForResource:NSStringFromClass(item.cellClass) ofType:@"nib"]) {
-//        self.registeredXIBs[identifier] = objectClass;
-//        [self.tableView registerNib:[UINib nibWithNibName:identifier bundle:bundle] forCellReuseIdentifier:objectClass];
         [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass(item.cellClass) bundle:bundle] forCellReuseIdentifier:item.cellIdentifier];
     } else {
         [self.tableView registerClass:item.cellClass forCellReuseIdentifier:item.cellIdentifier];
     }
 }
-//
-//- (id)objectAtKeyedSubscript:(id <NSCopying>)key
-//{
-//    return self.registeredClasses[key];
-//}
-//
-//- (void)setObject:(id)obj forKeyedSubscript:(id <NSCopying>)key
-//{
-//    [self registerClass:(NSString *)key forCellWithReuseIdentifier:obj];
-//}
 
 - (NSArray *)sections
 {
@@ -184,15 +137,9 @@
     RETableViewSection *section = self.mutableSections[indexPath.section];
     RETableViewItem *item = section.items[indexPath.row];
 
-
-    NSString *cellIdentifier = item.cellIdentifier;
-    
-//    Class cellClass = [self classForCellAtIndexPath:indexPath];
-//    NSAssert(cellClass != nil, @"not found cell for item(%@)", NSStringFromClass(item.class));
-
     [self registerCellClassIfNeeded:item bundle:nil];
-    RETableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    NSAssert(cell != nil, @"%@ not register", cellIdentifier);
+    RETableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:item.cellIdentifier];
+    NSAssert(cell != nil, @"%@ not register", item.cellIdentifier);
 
     void (^loadCell)(RETableViewCell *cell) = ^(RETableViewCell *cell) {
         cell.tableViewManager = self;
