@@ -156,6 +156,8 @@ CGFloat const RETableViewSectionFooterHeightAutomatic = DBL_MAX;
 {
     NSAssert([item isKindOfClass:[RETableViewItem class]], @"item(%@) must be kind of RETableViewItem.class", NSStringFromClass(item.class));
     NSAssert(item.cellClass != nil, @"class of cell must be set for item(%@)", NSStringFromClass(item.class));
+    NSAssert([item.cellClass isKindOfClass:RETableViewCell.class],
+            @"cell(%@) must be subclass of RETableViewCell.", NSStringFromClass(item.cellClass));
 }
 
 - (void)addItem:(RETableViewItem *)item

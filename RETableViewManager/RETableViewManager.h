@@ -98,6 +98,22 @@
  */
 - (id)initWithTableView:(UITableView *)tableView;
 
+
+///-------------------------------------------
+/// @name Cell Reuse
+///-------------------------------------------
+
+- (void)registerCellClassIfNeeded:(RETableViewItem *)item
+                           bundle:(NSBundle *)bundle;
+
+- (void)loadCellIfNeeded:(RETableViewCell *)cell
+               tableView:(UITableView *)tableView
+               indexPath:(NSIndexPath *)indexPath;
+
+- (void)configCell:(RETableViewCell *)cell
+         tableView:(UITableView *)tableView
+         indexPath:(NSIndexPath *)indexPath;
+
 ///-------------------------------------------
 /// @name Managing the Delegate
 ///-------------------------------------------

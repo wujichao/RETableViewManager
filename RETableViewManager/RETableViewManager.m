@@ -109,6 +109,46 @@
     }
 }
 
+- (void)loadCellIfNeeded:(RETableViewCell *)cell
+               tableView:(UITableView *)tableView
+               indexPath:(NSIndexPath *)indexPath
+{
+    if (cell.loaded) {
+        return;
+    }
+
+    cell.tableViewManager = self;
+
+    // RETableViewManagerDelegate
+    //
+    if ([self.delegate conformsToProtocol:@protocol(RETableViewManagerDelegate)] && [self.delegate respondsToSelector:@selector(tableView:willLoadCell:forRowAtIndexPath:)])
+        [self.delegate tableView:tableView willLoadCell:cell forRowAtIndexPath:indexPath];
+
+    [cell cellDidLoad];
+
+    // RETableViewManagerDelegate
+    //
+    if ([self.delegate conformsToProtocol:@protocol(RETableViewManagerDelegate)] && [self.delegate respondsToSelector:@selector(tableView:didLoadCell:forRowAtIndexPath:)])
+        [self.delegate tableView:tableView didLoadCell:cell forRowAtIndexPath:indexPath];
+}
+
+- (void)configCell:(RETableViewCell *)cell
+         tableView:(UITableView *)tableView
+         indexPath:(NSIndexPath *)indexPath
+{
+    RETableViewSection *section = self.mutableSections[indexPath.section];
+    RETableViewItem *item = section.items[indexPath.row];
+
+    cell.rowIndex = indexPath.row;
+    cell.sectionIndex = indexPath.section;
+    cell.parentTableView = tableView;
+    cell.section = section;
+    cell.item = item;
+    cell.detailTextLabel.text = item.detailLabelText;
+
+    [cell cellWillAppear];
+}
+
 - (NSArray *)sections
 {
     return self.mutableSections;
@@ -143,36 +183,9 @@
     [self registerCellClassIfNeeded:item bundle:nil];
     RETableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:item.cellIdentifier];
     NSAssert(cell != nil, @"%@ not register", item.cellIdentifier);
+    [self loadCellIfNeeded:cell tableView:tableView indexPath:indexPath];
+    [self configCell:cell tableView:tableView indexPath:indexPath];
 
-    void (^loadCell)(RETableViewCell *cell) = ^(RETableViewCell *cell) {
-        cell.tableViewManager = self;
-        
-        // RETableViewManagerDelegate
-        //
-        if ([self.delegate conformsToProtocol:@protocol(RETableViewManagerDelegate)] && [self.delegate respondsToSelector:@selector(tableView:willLoadCell:forRowAtIndexPath:)])
-            [self.delegate tableView:tableView willLoadCell:cell forRowAtIndexPath:indexPath];
-        
-        [cell cellDidLoad];
-        
-        // RETableViewManagerDelegate
-        //
-        if ([self.delegate conformsToProtocol:@protocol(RETableViewManagerDelegate)] && [self.delegate respondsToSelector:@selector(tableView:didLoadCell:forRowAtIndexPath:)])
-            [self.delegate tableView:tableView didLoadCell:cell forRowAtIndexPath:indexPath];
-    };
-    
-    if ([cell isKindOfClass:[RETableViewCell class]] && [cell respondsToSelector:@selector(loaded)] && !cell.loaded) {
-        loadCell(cell);
-    }
-    
-    cell.rowIndex = indexPath.row;
-    cell.sectionIndex = indexPath.section;
-    cell.parentTableView = tableView;
-    cell.section = section;
-    cell.item = item;
-    cell.detailTextLabel.text = item.detailLabelText;
-    
-    [cell cellWillAppear];
-    
     return cell;
 }
 

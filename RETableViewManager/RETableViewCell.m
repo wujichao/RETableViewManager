@@ -48,9 +48,10 @@
                 indexPath:(NSIndexPath *)indexPath
 {
     if (item.cellHeight == UITableViewAutomaticDimension){
+        [tableViewManager registerCellClassIfNeeded:item bundle:nil];
         return [tableViewManager.tableView fd_heightForCellWithIdentifier:item.cellIdentifier cacheByIndexPath:indexPath configuration:^(RETableViewCell *cell) {
-            cell.item = item;
-            [cell cellWillAppear];
+            [tableViewManager loadCellIfNeeded:cell tableView:tableViewManager.tableView indexPath:indexPath];
+            [tableViewManager configCell:cell tableView:tableViewManager.tableView indexPath:indexPath];
         }];
     }
 
