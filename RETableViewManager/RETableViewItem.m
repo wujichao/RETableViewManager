@@ -46,9 +46,6 @@
     self.cellClass = cellClass;
     self.selectionHandler = selectionHandler;
 
-    NSAssert([cellClass isKindOfClass:RETableViewCell.class],
-            @"cell(%@) must be subclass of RETableViewCell.", NSStringFromClass(cellClass));
-
     return self;
 }
 
