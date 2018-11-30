@@ -44,6 +44,7 @@
         return nil;
 
     self.cellClass = cellClass;
+    self.cellHeight = UITableViewAutomaticDimension;
     self.selectionHandler = selectionHandler;
 
     return self;
