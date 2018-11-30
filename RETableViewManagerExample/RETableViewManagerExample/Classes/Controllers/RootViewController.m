@@ -15,6 +15,7 @@
 #import "XIBTestViewController.h"
 #import "IndexedListViewController.h"
 #import "ValidationsViewController.h"
+#import "FDFeedViewController.h"
 
 @interface RootViewController ()
 
@@ -78,6 +79,11 @@
     [section addItem:[RETableViewItem itemWithTitle:@"Validations" accessoryType:UITableViewCellAccessoryDisclosureIndicator selectionHandler:^(RETableViewItem *item) {
         [item deselectRowAnimated:YES];
         [weakSelf.navigationController pushViewController:[[ValidationsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
+    }]];
+
+    [section addItem:[RETableViewItem itemWithTitle:@"Feed" accessoryType:UITableViewCellAccessoryDisclosureIndicator selectionHandler:^(RETableViewItem *item) {
+        [item deselectRowAnimated:YES];
+        [weakSelf.navigationController pushViewController:[[FDFeedViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
     }]];
 }
 
