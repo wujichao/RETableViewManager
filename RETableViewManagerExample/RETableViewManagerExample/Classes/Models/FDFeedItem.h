@@ -12,7 +12,7 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
-@property (nonatomic, copy, readonly) NSString *title;
+@property (nonatomic, copy, readonly) NSString *topic;
 @property (nonatomic, copy, readonly) NSString *content;
 @property (nonatomic, copy, readonly) NSString *username;
 @property (nonatomic, copy, readonly) NSString *time;

@@ -65,6 +65,7 @@
 		31BCDE7CE6F3E7CAF805326A /* FDFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BCDF6FD8C34E914A4F33A1 /* FDFeedCell.m */; };
 		50359B2119D2BF8C00559B3E /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50359B1F19D2BF8C00559B3E /* Default-667h@2x.png */; };
 		50359B2219D2BF8C00559B3E /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50359B2019D2BF8C00559B3E /* Default-736h@3x.png */; };
+		EA9E7B4421B18E2600479617 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9E7B4321B18E2600479617 /* Images.xcassets */; };
 		F2814D00593F9CCD9E6BAEB6 /* libPods-RETableViewManagerExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D875647280DD96E71EA02DDE /* libPods-RETableViewManagerExample.a */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,7 @@
 		50359B2019D2BF8C00559B3E /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		68BCD43F2130640F708943B9 /* Pods-RETableViewManagerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RETableViewManagerExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RETableViewManagerExample/Pods-RETableViewManagerExample.release.xcconfig"; sourceTree = "<group>"; };
 		D875647280DD96E71EA02DDE /* libPods-RETableViewManagerExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RETableViewManagerExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA9E7B4321B18E2600479617 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +329,7 @@
 				30EF93BB16E039B800B84981 /* InfoPlist.strings */,
 				30939CDC17949A10004D95A9 /* Photos */,
 				31BCDB8CBBCDB4A1584E3E33 /* data.json */,
+				EA9E7B4321B18E2600479617 /* Images.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				30939CEA17949A10004D95A9 /* photo2.jpg in Resources */,
 				30939CEB17949A10004D95A9 /* photo3.jpg in Resources */,
 				30939CEC17949A10004D95A9 /* photo4.jpg in Resources */,
+				EA9E7B4421B18E2600479617 /* Images.xcassets in Resources */,
 				30939CED17949A10004D95A9 /* photo5.jpg in Resources */,
 				30939CEE17949A10004D95A9 /* photo6.jpg in Resources */,
 				50359B2119D2BF8C00559B3E /* Default-667h@2x.png in Resources */,

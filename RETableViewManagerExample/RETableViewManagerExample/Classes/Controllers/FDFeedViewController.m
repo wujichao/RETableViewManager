@@ -25,7 +25,7 @@
 
     // Set some UITableView properties
     //
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
 
     // Add items
     //
