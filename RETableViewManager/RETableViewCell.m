@@ -42,14 +42,17 @@
     return NO;
 }
 
-+ (CGFloat)heightWithItem:(RETableViewItem *)item tableViewManager:(RETableViewManager *)tableViewManager
+
++ (CGFloat)heightWithItem:(RETableViewItem *)item
+         tableViewManager:(RETableViewManager *)tableViewManager
+                indexPath:(NSIndexPath *)indexPath
 {
-//    if (item.cellHeight == UITableViewAutomaticDimension){
-//        return [tableViewManager.tableView fd_heightForCellWithIdentifier:item.cellIdentifier configuration:^(RETableViewCell *cell) {
-//            cell.item = item;
-//            [cell cellWillAppear];
-//        }];
-//    }
+    if (item.cellHeight == UITableViewAutomaticDimension){
+        return [tableViewManager.tableView fd_heightForCellWithIdentifier:item.cellIdentifier cacheByIndexPath:indexPath configuration:^(RETableViewCell *cell) {
+            cell.item = item;
+            [cell cellWillAppear];
+        }];
+    }
 
     if (item.cellHeight > 0)
         return item.cellHeight;

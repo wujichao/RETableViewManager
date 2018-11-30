@@ -16,7 +16,9 @@
 
 @implementation ListImageCell
 
-+ (CGFloat)heightWithItem:(NSObject *)item tableViewManager:(RETableViewManager *)tableViewManager
++ (CGFloat)heightWithItem:(RETableViewItem *)item
+         tableViewManager:(RETableViewManager *)tableViewManager
+                indexPath:(NSIndexPath *)indexPath
 {
     return 306;
 }

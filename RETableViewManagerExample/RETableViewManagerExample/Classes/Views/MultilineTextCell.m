@@ -19,7 +19,9 @@ static const CGFloat kVerticalMargin = 10.0;
 
 @implementation MultilineTextCell
 
-+ (CGFloat)heightWithItem:(MultilineTextItem *)item tableViewManager:(RETableViewManager *)tableViewManager
++ (CGFloat)heightWithItem:(RETableViewItem *)item
+         tableViewManager:(RETableViewManager *)tableViewManager
+                indexPath:(NSIndexPath *)indexPath
 {
     CGFloat horizontalMargin = kHorizontalMargin;
     if (item.section.style.contentViewMargin <= 0)
@@ -56,7 +58,7 @@ static const CGFloat kVerticalMargin = 10.0;
     if (self.section.style.contentViewMargin <= 0)
         horizontalMargin += 5.0;
     
-    CGRect frame = CGRectMake(0, 0, CGRectGetWidth(self.contentView.bounds), [MultilineTextCell heightWithItem:self.item tableViewManager:self.tableViewManager]);
+    CGRect frame = CGRectMake(0, 0, CGRectGetWidth(self.contentView.bounds), [MultilineTextCell heightWithItem:self.item tableViewManager:self.tableViewManager indexPath:nil]);
     frame = CGRectInset(frame, horizontalMargin, kVerticalMargin);
     
     self.multilineLabel.frame = frame;

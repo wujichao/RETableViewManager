@@ -77,6 +77,9 @@
     
     tableView.delegate = self;
     tableView.dataSource = self;
+
+    // disable estimate height of rows
+    tableView.estimatedRowHeight = 0;
     
     self.tableView = tableView;
 
@@ -351,7 +354,7 @@
     if ([self.delegate conformsToProtocol:@protocol(UITableViewDelegate)] && [self.delegate respondsToSelector:@selector(tableView:heightForRowAtIndexPath:)])
         return [self.delegate tableView:tableView heightForRowAtIndexPath:indexPath];
     
-    return [item.cellClass heightWithItem:item tableViewManager:self];
+    return [item.cellClass heightWithItem:item tableViewManager:self indexPath:indexPath];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)sectionIndex
@@ -452,7 +455,7 @@
     if ([self.delegate conformsToProtocol:@protocol(UITableViewDelegate)] && [self.delegate respondsToSelector:@selector(tableView:estimatedHeightForRowAtIndexPath:)])
         return [self.delegate tableView:tableView estimatedHeightForRowAtIndexPath:indexPath];
     
-    CGFloat height = [item.cellClass heightWithItem:item tableViewManager:self];
+    CGFloat height = [item.cellClass heightWithItem:item tableViewManager:self indexPath:indexPath];
 
     return height ? height : UITableViewAutomaticDimension;
 }

@@ -55,7 +55,9 @@ typedef NS_ENUM(NSInteger, RETableViewCellType) {
 /// @name Managing Cell Height
 ///-----------------------------
 
-+ (CGFloat)heightWithItem:(RETableViewItem *)item tableViewManager:(RETableViewManager *)tableViewManager;
++ (CGFloat)heightWithItem:(RETableViewItem *)item
+         tableViewManager:(RETableViewManager *)tableViewManager
+                indexPath:(NSIndexPath *)indexPath;
 
 ///-----------------------------
 /// @name Working With Keyboard

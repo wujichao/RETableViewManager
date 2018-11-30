@@ -93,6 +93,7 @@
 {
     self.textLabel.text = self.item.title.length == 0 ? @" " : self.item.title;
     self.textField.inputView = self.datePicker;
+    // datePicker 会造成UI卡顿
     self.datePicker.date = self.item.value ? self.item.value : (self.item.pickerStartDate ? self.item.pickerStartDate : [NSDate date]);
     self.datePicker.datePickerMode = self.item.datePickerMode;
     self.datePicker.locale = self.item.locale;
