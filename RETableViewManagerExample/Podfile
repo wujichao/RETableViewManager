@@ -4,4 +4,6 @@ target 'RETableViewManagerExample' do
   pod 'RETableViewManager', :path => '../', :inhibit_warnings => false
   pod 'Reveal-SDK', '11', :configurations => ['Debug']
   pod 'Masonry'
+  pod 'SVPullToRefresh', :git => 'https://github.com/LawrenceHan/SVPullToRefresh.git'
+
 end

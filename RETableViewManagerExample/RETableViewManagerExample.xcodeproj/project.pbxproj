@@ -59,6 +59,7 @@
 		30FE4161176A32C300F317B8 /* Middle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FE4158176A32C300F317B8 /* Middle@2x.png */; };
 		30FE4162176A32C300F317B8 /* Single_Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FE4159176A32C300F317B8 /* Single_Selected@2x.png */; };
 		30FE4163176A32C300F317B8 /* Single@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FE415A176A32C300F317B8 /* Single@2x.png */; };
+		31BCD0E78F5EE9393D564294 /* GLPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BCDDBBCCBF828727983BFD /* GLPullToRefreshView.m */; };
 		31BCD7AFEFCE5538B9DA5714 /* FDFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BCDA01C232F7E53300FC8D /* FDFeedViewController.m */; };
 		31BCDC80EBCDC74C10C28F96 /* FDFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BCDFB544050D85C5095127 /* FDFeedItem.m */; };
 		31BCDE28912A9A393DE2E2CC /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 31BCDB8CBBCDB4A1584E3E33 /* data.json */; };
@@ -143,11 +144,13 @@
 		30FE4158176A32C300F317B8 /* Middle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Middle@2x.png"; path = "Resources/Middle@2x.png"; sourceTree = "<group>"; };
 		30FE4159176A32C300F317B8 /* Single_Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Single_Selected@2x.png"; path = "Resources/Single_Selected@2x.png"; sourceTree = "<group>"; };
 		30FE415A176A32C300F317B8 /* Single@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Single@2x.png"; path = "Resources/Single@2x.png"; sourceTree = "<group>"; };
+		31BCD0CC81CD13E68716BF4F /* GLPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLPullToRefreshView.h; sourceTree = "<group>"; };
 		31BCD22E2B97A7097BA64D34 /* FDFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDFeedViewController.h; sourceTree = "<group>"; };
 		31BCD3CFB8EA71964B4C7AA1 /* FDFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDFeedItem.h; sourceTree = "<group>"; };
 		31BCDA01C232F7E53300FC8D /* FDFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDFeedViewController.m; sourceTree = "<group>"; };
 		31BCDB8CBBCDB4A1584E3E33 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		31BCDBBAF8B85C58B95E6C64 /* FDFeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDFeedCell.h; sourceTree = "<group>"; };
+		31BCDDBBCCBF828727983BFD /* GLPullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLPullToRefreshView.m; sourceTree = "<group>"; };
 		31BCDF6FD8C34E914A4F33A1 /* FDFeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDFeedCell.m; sourceTree = "<group>"; };
 		31BCDFB544050D85C5095127 /* FDFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDFeedItem.m; sourceTree = "<group>"; };
 		4FA8AA86AE35567F54B506A7 /* Pods-RETableViewManagerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RETableViewManagerExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RETableViewManagerExample/Pods-RETableViewManagerExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -225,6 +228,8 @@
 				30BB805717E0D8A400AD0861 /* MultilineTextCell.m */,
 				31BCDBBAF8B85C58B95E6C64 /* FDFeedCell.h */,
 				31BCDF6FD8C34E914A4F33A1 /* FDFeedCell.m */,
+				31BCDDBBCCBF828727983BFD /* GLPullToRefreshView.m */,
+				31BCD0CC81CD13E68716BF4F /* GLPullToRefreshView.h */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -541,6 +546,7 @@
 				31BCDC80EBCDC74C10C28F96 /* FDFeedItem.m in Sources */,
 				31BCDE7CE6F3E7CAF805326A /* FDFeedCell.m in Sources */,
 				31BCD7AFEFCE5538B9DA5714 /* FDFeedViewController.m in Sources */,
+				31BCD0E78F5EE9393D564294 /* GLPullToRefreshView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

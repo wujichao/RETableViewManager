@@ -7,12 +7,14 @@ PODS:
     - "UITableView+FDTemplateLayoutCell (~> 1.6)"
   - REValidation (0.1.4)
   - Reveal-SDK (11)
+  - SVPullToRefresh (0.4.4)
   - "UITableView+FDTemplateLayoutCell (1.6)"
 
 DEPENDENCIES:
   - Masonry
   - RETableViewManager (from `../`)
   - Reveal-SDK (= 11)
+  - SVPullToRefresh (from `https://github.com/LawrenceHan/SVPullToRefresh.git`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -25,6 +27,13 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   RETableViewManager:
     :path: "../"
+  SVPullToRefresh:
+    :git: https://github.com/LawrenceHan/SVPullToRefresh.git
+
+CHECKOUT OPTIONS:
+  SVPullToRefresh:
+    :commit: 9bd94ae3610c582f73e84b776c2157aefedf099a
+    :git: https://github.com/LawrenceHan/SVPullToRefresh.git
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -32,8 +41,9 @@ SPEC CHECKSUMS:
   RETableViewManager: 38f451de5d1927cdb59b03926e32db411bb104cc
   REValidation: 38c4de1be58455f8b00aab208ac80db316a66b7f
   Reveal-SDK: 7fa13d04bb55db61ff2342a990cf731d5159361d
+  SVPullToRefresh: ad09dbc1e5951b39d6d0c4e526da2777c70859a6
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
 
-PODFILE CHECKSUM: faf9c22963cd3f0e39f5989ad671ef95b6fb9871
+PODFILE CHECKSUM: 3918332a949e726550dfdf1c5401711c1e581110
 
 COCOAPODS: 1.5.3
