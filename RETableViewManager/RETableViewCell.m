@@ -125,7 +125,7 @@
         self.imageView.highlightedImage = item.highlightedImage;
     }
     if (self.textLabel.text.length == 0)
-        self.textLabel.text = @" ";
+        self.textLabel.text = nil;
 }
 
 - (void)cellDidDisappear
